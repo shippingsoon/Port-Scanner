@@ -16,13 +16,13 @@ int scanner(const char * host, int port, int timeout)
 	struct sockaddr_in address;
 	//This struct will determine when our connection times out.
 	struct timeval tv;
-    fd_set write_fds;
+	fd_set write_fds;
 	socklen_t so_error_len;
 	//The socket descriptor and error status. 
 	int sd, so_error;
 	
 	address.sin_family = AF_INET;
-    address.sin_addr.s_addr = inet_addr(host); 
+	address.sin_addr.s_addr = inet_addr(host); 
 	address.sin_port = htons(port);
 	//Seconds to timeout.
 	tv.tv_sec = timeout;
