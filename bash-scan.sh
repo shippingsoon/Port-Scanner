@@ -2,18 +2,20 @@
 
 USAGE="Usage: $0 HOST START_PORT END_PORT"
 
+#Check the number of arguments.
 if [ "$#" -ne 3 ]; then
 	echo $USAGE
 	exit
 fi
 
+#Check for non-numeric ports.
 if [ "`echo $2 | egrep ^[[:digit:]]+$`" = "" -o "`echo $3 | egrep ^[[:digit:]]+$`" = "" ]; then
 	echo $USAGE;
 	echo "Ports must be numberic"
 	exit
 fi
 
-#[ "$REPLY" -ge 1 -a "$REPLY" -le 32 ]
+#Check the port range.
 if [ $2 -le 0 -o $2 -ge 65535 -o $3 -le 0 -o $3 -ge 65535 ]; then
 	echo $USAGE;
 	echo "Ports must be between 1 - 65534"
