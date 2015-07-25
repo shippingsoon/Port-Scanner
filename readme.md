@@ -19,5 +19,5 @@ Usage: c-scan [-h host] [-t timeout] [-v version]
 <h4>bash-scan:</h4>
 
 ```
-Usage: ./bash-scan shippingsoon.com 80 90
+Usage: ./bash-scan.sh shippingsoon.com 80 90
 ```
