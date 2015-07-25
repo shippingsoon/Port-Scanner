@@ -16,3 +16,8 @@ chmod +x bin/c-scan
 ```
 Usage: c-scan [-h host] [-t timeout] [-v version]
 ```
+<h4>bash-scan:</h4>
+
+```
+Usage: ./bash-scan shippingsoon.com 80 90
+```
